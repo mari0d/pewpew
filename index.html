@@ -159,7 +159,7 @@ function about() {
                     "CORGI Attack", "Ping of DOOM", "Conficker", "Goldfinger", "SANDPAPER" ] ;
 
 	// attribution
-	attribution = "?"
+	attribution = "?";
 	attr_nationality = [ "American", "Chinese", "DPRK", "Iranian", "Nigerian", "Rogue", "Anonymous", "Sexy" ];
 	attr_group = [ "Teenager", "Agent", "Criminal", "Squirrel", "Dissident", "Contractor", "Terrorist", "Religious Zealot", "SOF" ];
 	attr_method = [ "Hard Coded C2", "MD5", "Text Formatting", "Informant", "HUMINT", "SIGINT", "IMINT", "Political Statement", "DNA"]
@@ -432,15 +432,15 @@ function about() {
              srclong = centers[center_id].LONG;
            }
 
-           // Set attribution
-
-           attribution = which_nationality + " " + which_group + " (" + which_method + ")";
-
-
            if (typeof drill_mode != 'undefined') {
 
               dstlat = in_lat;
               dstlong = in_lon;
+           }
+           
+           // Set attribution
+		   if (Math.floor((Math.random() * 4) + 1) == 4) {
+           		attribution = which_nationality + " " + which_group + " (" + which_method + ")";
            }
            
            hits.push( { origin : { latitude: +srclat, longitude: +srclong },
