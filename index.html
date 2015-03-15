@@ -439,8 +439,10 @@ function about() {
            }
 
            // Set attribution
-           attribution = which_nationality + " " + which_group + " (" + which_method + ")";
-
+           if (Math.floor((Math.random() * 4) + 1) == 4){
+           		attribution = which_nationality + " " + which_group + " (" + which_method + ")";
+           }
+           
            hits.push( { origin : { latitude: +srclat, longitude: +srclong },
                         destination : { latitude: +dstlat, longitude: +dstlong } } );
            map.arc(hits, {strokeWidth: 2, strokeColor: 'green'});
