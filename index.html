@@ -436,6 +436,11 @@ function about() {
               dstlat = in_lat;
               dstlong = in_lon;
            }
+
+           // Set attribution
+		   if (Math.floor((Math.random() * 4) + 1) == 4) {
+           		attribution = which_nationality + " " + which_group + " (" + which_method + ")";
+           }
            
            hits.push( { origin : { latitude: +srclat, longitude: +srclong },
                         destination : { latitude: +dstlat, longitude: +dstlong } } );
