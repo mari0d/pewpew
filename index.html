@@ -416,6 +416,11 @@ function about() {
              srccountry = "usa";
            }
 
+           // Set attribution
+           if (Math.floor((Math.random() * 4) + 1) == 4){
+           		attribution = which_nationality + " " + which_group + " (" + which_method + ")";
+           }
+
            // Specify a country
            else if (typeof origin !== 'undefined') {
              srccountry = origin.toUpperCase();
@@ -434,8 +439,8 @@ function about() {
 
            if (typeof drill_mode != 'undefined') {
 
-              dstlat = in_lat
-              dstlong = in_lon
+              dstlat = in_lat;
+              dstlong = in_lon;
            }
            
            hits.push( { origin : { latitude: +srclat, longitude: +srclong },
@@ -451,11 +456,6 @@ function about() {
                   return '<div class="hoverinfo">' + data.attk + '</div>';
                 }
             });
-
-           // Set attribution
-           if (Math.floor((Math.random() * 4) + 1) == 4){
-           		attribution = which_nationality + " " + which_group + " (" + which_method + ")";
-           }
 
            // update the scrolling attack div
            $('#attackdiv').append(srccountry + " (" + randomIP() + ") " +
