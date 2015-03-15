@@ -403,7 +403,7 @@ function about() {
              srclat = 39.0194;
              srclong = 125.7381;
              which_attack = "ZOMG NORTH KOREAZ!!!";
-             which_nation = "북한";
+             which_nationality = "북한";
              srccountry = "kp";
            }
            // source is always Chattanooga if chatt_mode is set
@@ -412,7 +412,7 @@ function about() {
              srclat = 35.0456297;
              srclong = -85.30968;
              which_attack = "OMG NATION STATE CHATTANOOGA!!!";
-             which_nation = "Tennesseean"
+             which_nationality = "Tennesseean"
              srccountry = "usa";
            }
 
@@ -439,7 +439,7 @@ function about() {
            }
 
            // Set attribution
-           attribution = attr_nationinality + " " + attr_group + " (" + attr_method + ")";
+           attribution = attr_nationality + " " + attr_group + " (" + attr_method + ")";
 
            hits.push( { origin : { latitude: +srclat, longitude: +srclong },
                         destination : { latitude: +dstlat, longitude: +dstlong } } );
